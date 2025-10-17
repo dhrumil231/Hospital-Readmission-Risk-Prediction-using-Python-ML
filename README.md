@@ -1,49 +1,99 @@
-# Hospital-Readmission-Risk-Prediction-using-Python-ML
-Hospital Readmission Risk Prediction using Machine Learning - This project, titled "Hospital Readmission Risk Prediction using Machine Learning," is a data science initiative that leverages machine learning to forecast the likelihood of patients being readmitted to a hospital. Utilizing a comprehensive healthcare dataset, the project aims to identify key factors contributing to readmission and build a predictive model to help healthcare providers improve patient care and resource management.
+-----
 
-🏥 Project Overview & Key Features- This project utilizes a structured healthcare dataset to predict hospital readmission rates. The analysis and modeling are contained within a single Jupyter Notebook.
+# 🏥 Hospital Readmission Risk Prediction using Python & ML
 
-Key features include:
-1) Extensive Data Preprocessing: The notebook demonstrates how to handle missing values, clean data, and prepare it for model training.
-2) Advanced Feature Engineering: The project applies advanced feature selection techniques, such as Recursive Feature Elimination with Cross-Validation (RFECV) and the Boruta algorithm, to identify the most predictive features.
-3) Comprehensive Model Evaluation: A wide range of supervised learning models are implemented and evaluated using key performance metrics like accuracy, precision, recall, and F1-score to determine the best-performing model.
+A machine learning project designed to predict the **risk of hospital readmission** within a 30-day window. This solution leverages Python's data science stack to process complex healthcare data, employ advanced feature selection, and evaluate multiple classification models to identify high-risk patients.
 
-📊 Methodology & Results
-The machine learning workflow follows these steps:
-1) Data Exploration: Initial data loading and cleaning, including handling missing values and analyzing feature distributions.
-2) Feature Selection: Employing advanced algorithms to select the most impactful features for the predictive models.
-3) Model Training: Implementing and training a diverse set of supervised learning models, including Decision Trees, Random Forest, Support Vector Machines (SVM), and Neural Networks (MLP).
-4) Performance Analysis: Evaluating and comparing the models to identify the most effective solution.
+| 🎯 **Goal** | 🐍 **Language** | 🧠 **Model Type** | 📊 **Best Metric** |
+| :---: | :---: | :---: | :---: |
+| **Risk Prediction** | **Python** | **Classification** | **Accuracy $\approx 49.79\%$ (SVM)** |
 
-The SVM model was found to be the most promising, achieving an accuracy of approximately 49.79% on the test set. The project includes a detailed classification report and confusion matrix to provide a transparent view of the model's performance on precision, recall, and F1-score for both positive and negative classes.
+-----
 
-🛠️ Tech Stack
-This project is built using Python and a suite of powerful data science libraries.
+## ⭐ Project Significance & Objectives
 
-Languages: Python
+Preventing unnecessary hospital readmissions is critical for improving patient care and reducing healthcare costs. This project aims to provide a reliable, data-driven tool to help clinical staff intervene effectively.
 
-Core Libraries:
-1) Pandas for data manipulation and analysis.
-2) NumPy for numerical operations.
-3) Scikit-learn for machine learning models and utilities.
-4) Matplotlib and Seaborn for data visualization.
-5) imblearn for handling imbalanced datasets.
-6) Boruta for feature selection.
+The core objectives include:
 
-Models:
-- Gaussian Naive Bayes
-- Decision Tree Classifier
-- Random Forest Classifier
-- AdaBoost Classifier
-- Hist Gradient Boosting Classifier
-- Extra Trees Classifier
-- Support Vector Classifier (SVC)
-- Multilayer Perceptron (MLP) Classifier
+  * **Identifying High-Risk Patients:** Accurately classifying patients who are likely to be readmitted within 30 days.
+  * **Feature Importance:** Determining which **clinical and demographic factors** are the strongest predictors of readmission risk.
+  * **Model Comparison:** Implementing and comparing a range of supervised learning models to find the **most robust and clinically useful predictor**.
 
-📊 Dataset
-The project utilizes a structured healthcare dataset containing over 100,000 patient records. The data includes:
+-----
 
-Patient Demographics: Age, race, gender.
-Encounter Information: Admission type, length of stay, number of lab tests, procedures, and medications.
-Clinical Data: Primary and secondary diagnoses, and diabetes-specific metrics (e.g., A1C test results, medication).
-Data preprocessing involved handling a large number of missing values and normalizing or scaling numerical features to prepare them for model training.
+## 🛠️ Methodology & Machine Learning Workflow
+
+The project follows a rigorous data science workflow documented in the main notebook.
+
+1.  **🔍 Data Exploration & Cleaning:** Initial data loading, handling missing values, and addressing potential feature errors.
+2.  **⚙️ Advanced Feature Selection:** Employing advanced algorithms, such as **Boruta**, to select the **most impactful features** for the predictive models.
+3.  **🧠 Comprehensive Model Training:** Implementing and training a diverse set of supervised learning models:
+      * **Gaussian Naive Bayes**
+      * **Decision Tree Classifier**
+      * **Random Forest Classifier**
+      * **Support Vector Machines (SVM)**
+      * **Neural Networks (MLP)**
+      * **AdaBoost Classifier**
+      * **Gradient Boosting Classifier**
+4.  **📈 Performance Analysis:** Evaluating all models using key classification metrics to identify the most effective solution. This also included the use of **Imblearn** for handling imbalanced datasets.
+
+-----
+
+## 📊 Results & Best Performer
+
+After comprehensive evaluation, the **Support Vector Machines (SVM)** model was found to be the most promising baseline predictor:
+
+| Metric | SVM Model Score |
+| :--- | :--- |
+| **Accuracy** | $\approx 49.79\%$ (on the test set) |
+| **Precision, Recall, F1-Score** | Detailed in the classification report and confusion matrix within the notebook. |
+
+The project includes a **detailed classification report** and **confusion matrix** to provide a transparent view of the model's performance on positive and negative classes.
+
+-----
+
+## 💻 Tech Stack & Dependencies
+
+The entire project is built using Python and its standard data science libraries:
+
+  * **Language:** **Python**
+  * **Core Libraries:**
+      * **[Pandas](https://pandas.pydata.org/):** For data manipulation and analysis.
+      * **[NumPy](https://numpy.org/):** For numerical operations.
+      * **[Scikit-learn](https://scikit-learn.org/stable/):** For core machine learning models and utilities.
+      * **[Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/):** For data visualization.
+      * **[Imblearn](https://imbalanced-learn.org/stable/):** Specifically used for handling the **imbalanced nature** of healthcare readmission datasets.
+      * **[Boruta](https://github.com/scikit-learn-contrib/boruta_py):** Used for advanced feature selection.
+
+-----
+
+## ⚙️ Getting Started (Run Locally)
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/dhrumil231/Hospital-Readmission-Risk-Prediction-using-Python-ML.git
+    ```
+2.  **Navigate to the directory:**
+    ```bash
+    cd Hospital-Readmission-Risk-Prediction-using-Python-ML
+    ```
+3.  **Install dependencies:**
+    ```bash
+    # Install all libraries listed in the Tech Stack section.
+    # A requirements.txt file would be recommended for easy setup.
+    pip install pandas numpy scikit-learn matplotlib seaborn imblearn boruta
+    ```
+4.  **Launch Jupyter Notebook:**
+    ```bash
+    jupyter notebook
+    ```
+5.  **Run the analysis:** Open the main analysis notebook to execute the full data-to-prediction pipeline.
+
+-----
+
+## 🔮 Future Work
+
+  * **Deep Learning Optimization:** Fine-tuning the Neural Networks (MLP) and exploring more advanced architectures like CNNs or LSTMs for time-series features.
+  * **Hyperparameter Tuning:** Implementing systematic hyperparameter optimization (e.g., Grid Search, Bayesian Optimization) for the top-performing models (e.g., SVM, Random Forest).
+  * **Explainable AI (XAI):** Integrating tools like **SHAP or LIME** to provide clinical interpretability to the model's predictions.
